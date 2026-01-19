@@ -1,5 +1,5 @@
 ---
-
+const tituloPagina = "Blog";
 ---
 
 <html lang="en">
@@ -8,11 +8,11 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{tituloPagina}</title>
 	</head>
     <a href="/">Home</a>
     <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <a href="/blog/">{tituloPagina}</a>
 
 	 <h1>Blog de Josué sobre Astro</h1>
   <h2>Aqui pondré todo lo que estoy aprendiendo sobre Astro</h2>

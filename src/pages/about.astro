@@ -1,5 +1,16 @@
 ---
+const tituloPagina = "Sobre mi";
 
+const identidad= {
+    nombre: "Josué",
+    pais: "España",
+    profesion: "Desarrollador Web",
+    hobbies: ["leer", "viajar", "jugar videojuegos", "volleyball"]
+}
+const skills = ["HTML", "CSS", "JavaScript", "Astro", "React", "Escribir documentos", "Comunicación"];
+const feliz = true;
+const terminado = false;
+const objetivo=3;
 ---
 
 <html lang="en">
@@ -8,17 +19,35 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title> {tituloPagina}</title>
 	</head>
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
 
-	 <h1>Sobre mi</h1>
+	 <h1> {tituloPagina}</h1>
   <h2>Y sobre mi aprendizaje de Astro</h2>
 
   <p>Estoy haciendo un tutorial de astro. Esta es la segunda página de mi sitio web, y es la primera que construí yo mismo!</p>
 
   <p>Este sitio se actualizará a medida que complete más del tutorial, ¡así que mantente pendiente y ve cómo va mi viaje!</p>
+    <p>Aqui hay algunos datos sobre mi:</p>
+    <ul>
+        <li>Mi nombre es {identidad.nombre}</li>
+        <li>Soy de {identidad.pais}</li>
+        <li>Estoy estudiando para ser {identidad.profesion}</li>
+        {identidad.hobbies.length >= 2 &&
+        <li>2 de mis hobbies son {identidad.hobbies[0]} y {identidad.hobbies[1]}</li>
+        }
+    </ul>
+    <p>Mis habilidades son:</p>
+    <ul>
+        {skills.map(skill => <li>{skill}</li>)}
+    </ul>
+    {feliz && <p>Estoy feliz de estar aprendiendo Astro!</p>}
+
+{terminado && <p>¡He terminado este tutorial!</p>}
+
+{objetivo === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no es 3 días.</p>}
 </body>
 </html>
