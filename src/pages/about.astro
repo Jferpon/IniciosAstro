@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const tituloPagina = "Sobre mi";
 
@@ -42,9 +44,7 @@ const textCase = "uppercase";
     </style>
   </head>
 	</head>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Header />
 
 	 <h1> {tituloPagina}</h1>
   <h2>Y sobre mi aprendizaje de Astro</h2>
@@ -70,5 +70,9 @@ const textCase = "uppercase";
 {terminado && <p>¡He terminado este tutorial!</p>}
 
 {objetivo === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no es 3 días.</p>}
+    <Footer/>
+    <script>
+    import "../scripts/menu.js";
+    </script>
 </body>
 </html>

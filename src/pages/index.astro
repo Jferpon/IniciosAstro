@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const tituloPagina = "Inicio";
 ---
@@ -12,9 +14,13 @@ const tituloPagina = "Inicio";
 		<title>{tituloPagina}</title>
 	</head>
 	<body>
-	<a href="/">{tituloPagina}</a>
-	<a href="/about/">About</a>
-	<a href="/blog/">Blog</a>
+		<Header />
 		<h1>Tutorial Astro de Josué principiante con Netlify</h1>
+
+		  <Footer />
+  <script>
+    import "../scripts/menu.js";
+  </script>
+</body>
 	</body>
 </html>
