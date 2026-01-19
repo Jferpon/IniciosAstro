@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 const tituloPagina = "Sobre mi";
 
 const identidad= {
@@ -11,6 +12,9 @@ const skills = ["HTML", "CSS", "JavaScript", "Astro", "React", "Escribir documen
 const feliz = true;
 const terminado = false;
 const objetivo=3;
+const skillColor = "crimson";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -20,6 +24,23 @@ const objetivo=3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title> {tituloPagina}</title>
+        <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{tituloPagina}</title>
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+    </style>
+  </head>
 	</head>
     <a href="/">Home</a>
     <a href="/about/">About</a>
@@ -42,7 +63,7 @@ const objetivo=3;
     </ul>
     <p>Mis habilidades son:</p>
     <ul>
-        {skills.map(skill => <li>{skill}</li>)}
+        {skills.map(skill => <li class="skill">{skill}</li>)}
     </ul>
     {feliz && <p>Estoy feliz de estar aprendiendo Astro!</p>}
 
