@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
 const tituloPagina = "Inicio";
 ---
 <BaseLayout tituloPagina={tituloPagina}>
   <h2>Mi increible pagina, desplegada tambien con Netlify</h2>
+  <Greeting client:load messages={["Hello", "Salut", "Hej", "Hallo"]} />
 </BaseLayout>
