@@ -1,3 +1,5 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Mi primer blog'
 pubDate: 2026-01-19
 description: 'Este es el primer post de mi blog'
@@ -9,7 +11,6 @@ tags: ["astro", "blogging", "learning in public"]
 ---
 # Mi primer post 
 
-Published on: 2026-01-19
 
 Bienvenidos a mi primer blog donde estaré poniendo todo lo que estoy aprendiendo en relacion con Astro 
 

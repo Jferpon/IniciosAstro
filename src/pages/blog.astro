@@ -1,21 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts= Object.values(import.meta.glob('../posts/*.md', { eager: true }));
 const tituloPagina = "Blog";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{tituloPagina}</title>
-	</head>
-    <Header />
-
-	 <h1>Blog de Josué sobre Astro</h1>
+<BaseLayout tituloPagina={tituloPagina}>
   <h2>Aqui pondré todo lo que estoy aprendiendo sobre Astro</h2>
     <p>Bienvenidos al blog</p>
     <ul>
@@ -23,9 +12,6 @@ const tituloPagina = "Blog";
       <li><a href="/posts/post-2/">Post 2</a></li>
       <li><a href="/posts/post-3/">Post 3</a></li>
     </ul>
-    <Footer/>
-    <script>
-    import "../scripts/menu.js";
-    </script>
+</BaseLayout>
 </body>
 </html>

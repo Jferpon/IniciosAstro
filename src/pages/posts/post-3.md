@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi tercer post del blog
 author: Astro Learner Josué
 description: "Mas cosas por hacer"

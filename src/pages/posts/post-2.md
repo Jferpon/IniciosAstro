@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi segundo post del blog 
 author: Astro Learner Josué
 description: "Sigo aprendiendo acerca de Astro"
